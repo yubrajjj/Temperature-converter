@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+</head>
+<body>
+  
+
+
+
+    <div class="main">
+        
+    <h1>Temperature converter</h1>
+   
+
+
+
+        <label class="cl">Celsius</label>
+       
+            <input type="number" value="0" id="cl">
+           
+
+    
+
+
+
+
+            <div class="fr">
+            <label >Fahrenhiet</label>
+           <input type="number" value="32" id="fh">
+        </div>
+        </div>
+
+ 
+
+<footer>
+  
+
+
+        <p id="copyright">
+   
+     
+            copyright &copy; yubraj khatri 2022-07-25
+        </p>   
+</footer>
+
+       
+    <script>
+
+        
+var cl=document.getElementById("cl");
+var fh=document.getElementById("fh");
+
+cl.addEventListener("input",function(){
+    let c=this.value;
+    let f=(c * 9/5)+32;
+    console.log(f);
+    if(!Number.isInteger(f)){
+     f=f.toFixed(4)
+
+
+    }
+    fh.value=f;
+   
+});
+fh.addEventListener("input",function(){
+let f=this.value;
+let c=(f-32)*5/9;
+if(!Number.isInteger(c)){
+c=c.toFixed(4);
+}
+cl.value=c;
+
+});
+    </script>
+</body>
+</html>
